@@ -1,14 +1,17 @@
 /* ensure all pages have Bootstrap CSS */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
-.md-container {
-  max-width: 800px;
-  padding-top: 2rem;
-}
+@import '~bootstrap/scss/bootstrap';
 
 .sml-card {
-  width: 22rem;
   margin: 1rem 0;
+}
+
+.sport-columns {
+  @include media-breakpoint-up(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-up(lg) {
+    column-count: 3;
+  }
 }
 
 .cntr-footer {
@@ -23,4 +26,8 @@
 .sml-logo {
   height: 1em;
   margin-left: 10px;
+}
+
+.logo {
+  max-height: 250px;
 }
