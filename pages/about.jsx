@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import MainTemplate from '../components/main-template'
+import MainTemplate from '../components/main-template';
 
 export default function About() {
   return (
@@ -8,13 +8,13 @@ export default function About() {
       <Head>
         <title>Walter Ego—About</title>
       </Head>
-      <h1>Who's reponsible for all this?</h1>
+      <h1>Who’s reponsible for all this?</h1>
       <p>
-        Fergal Armstrong. @fffergal on Twitter and GitHub. That's right I'm a
+        Fergal Armstrong. @fffergal on Twitter and GitHub. That’s right I’m a
         white man, so if the whole idea of Walter Ego makes you feel defensive,
-        please don't take it out on women or anyone else.
+        please don’t take it out on women or anyone else.
       </p>
-      <h2>What's with the name?</h2>
+      <h2>What’s with the name?</h2>
       <p>
         It sounds a bit like alter ego. You know, like a Ron de plume, a
         male-ius, a Joe-sona.
@@ -22,8 +22,8 @@ export default function About() {
       <h2>Why would someone want this?</h2>
       <p>
         Some people say dismissive, mean, forward, and unnecessary things that
-        they wouldn't say to an old white man. If these people think you're an
-        old white man at first glance, you won't have to deal with them in your
+        they wouldn’t say to an old white man. If these people think you’re an
+        old white man at first glance, you won’t have to deal with them in your
         timeline.
       </p>
       <h2>Is this supposed to be funny?</h2>
@@ -33,15 +33,21 @@ export default function About() {
       </p>
       <p>
         Online harassment is a serious problem, and I have the luxury of being
-        in a privileged enough position to make light of it. I don't want to
-        suggest this isn't a real problem by making a joke.
+        in a privileged enough position to make light of it. I don’t want to
+        suggest this isn’t a real problem by making a joke.
       </p>
       <h2>Where do the profile images come from?</h2>
       <p>
-        They are made with machine learning from <a
-        href="https://thispersondoesnotexist.com">This Person Does Not
-        Exist</a>. I refresh the page and save any old white men I see.
+        They are made with machine learning from
+        {' '}
+        <a
+          href="https://thispersondoesnotexist.com"
+        >
+          This Person Does Not
+          Exist
+        </a>
+        . I refresh the page and save any old white men I see.
       </p>
     </MainTemplate>
-  )
+  );
 }

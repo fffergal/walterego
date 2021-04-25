@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import { Container, Row, Col, Card, CardColumns, Image, Button } from 'react-bootstrap'
+import Head from 'next/head';
+import {
+  Row, Col, Card, CardColumns, Image, Button,
+} from 'react-bootstrap';
 
-import MainTemplate from '../components/main-template'
+import MainTemplate from '../components/main-template';
 
 export default function Home() {
   return (
@@ -33,7 +35,11 @@ export default function Home() {
       <p>
         The free service will assign you a new name and profile image
         randomly from the 20 stock carefully curated fake old white men,
-        whenever you ask. The upcoming paid for <em>sport mode</em> comes
+        whenever you ask. The upcoming paid for
+        {' '}
+        <em>sport mode</em>
+        {' '}
+        comes
         with these added extras:
       </p>
       <CardColumns className="sport-columns">
@@ -49,7 +55,7 @@ export default function Home() {
           <Card.Body>
             <Card.Title>Easy undo ↩️</Card.Title>
             <Card.Text>
-              Save your existing profile info so it's easy to switch back.
+              Save your existing profile info so it’s easy to switch back.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -83,7 +89,7 @@ export default function Home() {
           <Card.Body>
             <Card.Title>Automatic timer ⏳</Card.Title>
             <Card.Text>
-              Do you know what you're about to say is going to attract the
+              Do you know what you’re about to say is going to attract the
               wrong sort of attention? Set an automatic timer right before
               you tweet, so you get all the benefit of using Walter Ego
               without having to change your profile back yourself later.
@@ -102,5 +108,5 @@ export default function Home() {
         </Card>
       </CardColumns>
     </MainTemplate>
-  )
+  );
 }

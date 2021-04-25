@@ -1,4 +1,4 @@
-import { Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap';
 
 export default function MainNav() {
   return (
@@ -10,7 +10,8 @@ export default function MainNav() {
           width="30"
           height="30"
           className="d-inline-block align-top"
-        />{' '}
+        />
+        {' '}
         Walter Ego
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,5 +23,5 @@ export default function MainNav() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
+  );
 }
