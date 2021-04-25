@@ -36,6 +36,12 @@ export default function About() {
         in a privileged enough position to make light of it. I don't want to
         suggest this isn't a real problem by making a joke.
       </p>
+      <h2>Where do the profile images come from?</h2>
+      <p>
+        They are made with machine learning from <a
+        href="https://thispersondoesnotexist.com">This Person Does Not
+        Exist</a>. I refresh the page and save any old white men I see.
+      </p>
     </MainTemplate>
   )
 }
