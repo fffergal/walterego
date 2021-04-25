@@ -4,6 +4,7 @@ import {
 } from 'react-bootstrap';
 
 import MainTemplate from '../components/main-template';
+import TwitterCheck from '../components/twitter-check';
 
 export default function Home() {
   return (
@@ -21,11 +22,11 @@ export default function Home() {
             Connect walterego.golf with your Twitter account to replace your name
             and profile image with an old white man, whenever you need a break!
           </p>
-          <p>
-            <Button variant="primary" href="/api/v1/twitterlink">
-              Link Twitter
+          <TwitterCheck>
+            <Button variant="primary" href="/dashboard">
+              Go to Dashboard
             </Button>
-          </p>
+          </TwitterCheck>
         </Col>
         <Col lg={4} className="justify-content-center">
           <Image src="/walterego.png" className="logo d-block m-auto" />
