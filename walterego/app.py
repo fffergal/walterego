@@ -5,7 +5,12 @@ import os
 from flask import Flask
 
 from walterego.auth import oauth
-from walterego.blueprints import twittercallback, twittercheck, twitterlink
+from walterego.blueprints import (
+    stockprofile,
+    twittercallback,
+    twittercheck,
+    twitterlink,
+)
 
 ENV_SECRETS = [
     "SECRET_KEY",
@@ -20,6 +25,7 @@ def create_app():
     app.config.update({key: os.environ[key] for key in ENV_SECRETS})
     oauth.init_app(app)
 
+    app.register_blueprint(stockprofile.bp)
     app.register_blueprint(twittercallback.bp)
     app.register_blueprint(twittercheck.bp)
     app.register_blueprint(twitterlink.bp)
