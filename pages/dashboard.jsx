@@ -21,13 +21,26 @@ export default function Dashboard() {
   let content;
   if (!profile) {
     content = (
-      <Button onClick={newProfile}>
-        Set my Walter Ego
-      </Button>
+      <div>
+        <p>This will change your profile straight away.</p>
+        <Button onClick={newProfile}>
+          Set my Walter Ego
+        </Button>
+      </div>
     );
   } else if (profile.error) content = <p>Error updating your profile.</p>;
   else if (!profile.data) content = <p>Updating your profile…</p>;
-  else content = <Profile {...profile.data} />;
+  else {
+    content = (
+      <div>
+        <p>
+          Here’s your new profile. Your Twitter account has already been
+          updated.
+        </p>
+        <Profile {...profile.data} />
+      </div>
+    );
+  }
   return (
     <MainTemplate>
       <h1>Dashboard</h1>
