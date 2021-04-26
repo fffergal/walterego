@@ -1,8 +1,7 @@
 import useSWR from 'swr';
-import fetcher from '../lib/fetcher';
 
 export default function TwitterCheck({ children }) {
-  const { data, error } = useSWR('/api/v1/twittercheck', fetcher);
+  const { data, error } = useSWR('/api/v1/twittercheck');
   if (error) return <p>Error checking if you are signed in with Twitter.</p>;
   if (!data) return <p>Checking if you are signed in with Twitter…</p>;
   if (!data.signedIn) {
