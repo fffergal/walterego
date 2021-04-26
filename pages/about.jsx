@@ -48,6 +48,13 @@ export default function About() {
         </a>
         . I refresh the page and save any old white men I see.
       </p>
+      <h2>Do you think this is ageist?</h2>
+      <p>
+        It’s possible. We should avoid stereotypes about older people. If you
+        look around at business and political leaders, a lot of them aren’t
+        just white men, they are old men. I consider this “punching up” to
+        people like that.
+      </p>
     </MainTemplate>
   );
 }
