@@ -10,8 +10,8 @@ export default function About() {
       </Head>
       <h1>Who’s reponsible for all this?</h1>
       <p>
-        Fergal Armstrong. @fffergal on Twitter and GitHub. That’s right I’m a
-        white man, so if the whole idea of Walter Ego makes you feel defensive,
+        Fergal Armstrong. @fffergal on Twitter and GitHub. That’s right, I’m a
+        white man. If the whole idea of Walter Ego makes you feel defensive,
         please don’t take it out on women or anyone else.
       </p>
       <h2>What’s with the name?</h2>
