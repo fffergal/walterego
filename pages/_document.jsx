@@ -8,6 +8,12 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script async defer data-domain="walterego.golf" src="https://plausible.io/js/plausible.js" />
+          <script>
+            window.plausible = window.plausible || function()
+            {'{'}
+            (window.plausible.q = window.plausible.q || []).push(arguments)
+            {'}'}
+          </script>
         </Head>
         <body>
           <Main />
