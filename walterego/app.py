@@ -3,7 +3,7 @@
 import os
 from types import SimpleNamespace
 
-from flask import Flask
+from flask import Flask, current_app
 from grpc import ssl_channel_credentials
 from opentelemetry import trace
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
@@ -32,41 +32,41 @@ ENV_SECRETS = [
 tracing_inited_holder = SimpleNamespace(inited=False)
 
 
-def add_tracing(app):
+def init_tracing():
     """
     Add tracing to a Flask app.
 
     This is a bit different to the OpenTelemetry Python examples because Vercel does
     some forking and it needs to be handled without knowing which app runner is being
     used.
+
+    To be used with Flask's before_first_request.
     """
-    RequestsInstrumentor().instrument()
-    FlaskInstrumentor().instrument_app(app)
-    old_wsgi_app = app.wsgi_app
+    if not tracing_inited_holder.inited:
+        otlp_exporter = OTLPSpanExporter(
+            endpoint="https://api.honeycomb.io:443",
+            insecure=False,
+            credentials=ssl_channel_credentials(),
+            headers=(
+                ("x-honeycomb-team", current_app.config["HONEYCOMB_WRITE_KEY"]),
+                ("x-honeycomb-dataset", "Walter Ego"),
+            ),
+        )
+        trace.set_tracer_provider(TracerProvider())
+        tracing_inited_holder.processor = BatchSpanProcessor(otlp_exporter)
+        trace.get_tracer_provider().add_span_processor(tracing_inited_holder.processor)
+        tracing_inited_holder.inited = True
 
-    def init_tracing_app(environ, start_response):
-        if not tracing_inited_holder.inited:
-            otlp_exporter = OTLPSpanExporter(
-                endpoint="https://api.honeycomb.io:443",
-                insecure=False,
-                credentials=ssl_channel_credentials(),
-                headers=(
-                    ("x-honeycomb-team", app.config["HONEYCOMB_WRITE_KEY"]),
-                    ("x-honeycomb-dataset", "Walter Ego"),
-                ),
-            )
-            trace.set_tracer_provider(TracerProvider())
-            tracing_inited_holder.processor = BatchSpanProcessor(otlp_exporter)
-            trace.get_tracer_provider().add_span_processor(
-                tracing_inited_holder.processor
-            )
-            tracing_inited_holder.inited = True
-        try:
-            return old_wsgi_app(environ, start_response)
-        finally:
-            tracing_inited_holder.processor.force_flush()
 
-    app.wsgi_app = init_tracing_app
+def flush_tracing(exc):
+    """
+    Flush the global OpenTelemetry processor.
+
+    To be used with Flask's teardown_request. Needed because Vercel can suspend the
+    thread before flushing.
+    """
+    if hasattr(tracing_inited_holder, "processor"):
+        tracing_inited_holder.processor.force_flush()
 
 
 def create_app():
@@ -74,7 +74,11 @@ def create_app():
     app = Flask(__name__)
     app.config.update({key: os.environ[key] for key in ENV_SECRETS})
 
-    add_tracing(app)
+    app.before_first_request(init_tracing)
+    app.teardown_request(flush_tracing)
+    RequestsInstrumentor().instrument()
+    FlaskInstrumentor().instrument_app(app)
+
     oauth.init_app(app)
 
     app.register_blueprint(stockprofile.bp)
