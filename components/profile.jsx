@@ -1,5 +1,7 @@
 import { Card, Image } from 'react-bootstrap';
 
+import SportModal from './sport-modal';
+
 export default function Profile({ profileImageUrl, profileName, profileScreenName }) {
   const headerStyle = {
     borderBottom: 'none',
@@ -28,6 +30,9 @@ export default function Profile({ profileImageUrl, profileName, profileScreenNam
           {profileScreenName}
         </Card.Subtitle>
       </Card.Body>
+      <Card.Footer className="text-center">
+        <SportModal variant="light">&#9825;</SportModal>
+      </Card.Footer>
     </Card>
   );
 }
