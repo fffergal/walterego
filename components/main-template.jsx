@@ -17,6 +17,9 @@ export default function MainTemplate({ children }) {
           <p>
             <Link href="/about"><a>Who’s responsible for all this?</a></Link>
           </p>
+          <p>
+            <Link href="/privacy"><a>Privacy</a></Link>
+          </p>
         </footer>
       </Container>
     </div>
