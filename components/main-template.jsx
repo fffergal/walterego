@@ -13,10 +13,10 @@ export default function MainTemplate({ children }) {
       </Head>
       <Container className="md-container">
         {children}
-        <footer className="cntr-footer">
-          <Link href="/about">
-            <a>Who’s responsible for all this?</a>
-          </Link>
+        <footer className="text-center pt-3 mt-2 border-top">
+          <p>
+            <Link href="/about"><a>Who’s responsible for all this?</a></Link>
+          </p>
         </footer>
       </Container>
     </div>
