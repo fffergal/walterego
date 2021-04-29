@@ -12,9 +12,7 @@ export default function MainTemplate({ children }) {
         <link rel="icon" href="/walterego.png" />
       </Head>
       <Container className="md-container">
-        <Container>
-          {children}
-        </Container>
+        {children}
         <footer className="cntr-footer">
           <Link href="/about">
             <a>Who’s responsible for all this?</a>
