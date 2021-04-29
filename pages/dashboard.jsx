@@ -8,15 +8,6 @@ import TwitterCheck from '../components/twitter-check';
 
 export default function Dashboard() {
   const [profile, setProfile] = useState(null);
-  const [showSport, setShowSport] = useState(false);
-
-  function sportModeInterest(ev) {
-    window.plausible(
-      'Sport Mode Interest',
-      { props: { feature: ev.target.innerText } },
-    );
-    setShowSport(true);
-  }
 
   async function newProfile() {
     setProfile({ data: null, error: null });
@@ -38,7 +29,7 @@ export default function Dashboard() {
             Set my Walter Ego
           </Button>
         </p>
-        <p><Button onClick={sportModeInterest}>Preview</Button></p>
+        <p><SportModal>Preview</SportModal></p>
       </>
     );
   } else if (profile.error) content = <p>Error updating your profile.</p>;
@@ -51,7 +42,7 @@ export default function Dashboard() {
           updated.
         </p>
         <Profile {...profile.data} />
-        <p className="mt-2"><Button onClick={sportModeInterest}>Undo</Button></p>
+        <p className="mt-2"><SportModal>Undo</SportModal></p>
       </>
     );
   }
@@ -61,7 +52,6 @@ export default function Dashboard() {
       <TwitterCheck>
         {content}
       </TwitterCheck>
-      <SportModal show={showSport} setShow={setShowSport} />
     </MainTemplate>
   );
 }
