@@ -6,3 +6,9 @@ dev-requirements.txt: dev-requirements.in requirements.txt
 
 junit.xml: tox.ini walterego/**/*
 	tox
+
+.coverage: tox.ini walterego/**/*
+	tox
+
+coverage.xml: .coverage
+	coverage xml
