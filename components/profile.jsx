@@ -31,7 +31,7 @@ export default function Profile({ profileImageUrl, profileName, profileScreenNam
         </Card.Subtitle>
       </Card.Body>
       <Card.Footer className="text-center">
-        <SportModal variant="light">&#9825;</SportModal>
+        <SportModal aria-label="Favorite" variant="light">&#9825;</SportModal>
       </Card.Footer>
     </Card>
   );
