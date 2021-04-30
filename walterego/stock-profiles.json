@@ -1,0 +1,24 @@
+{
+  "stockProfiles": [
+    {"profileName": "Michael Johnson", "profileImageUrl": "/owm1.jpg"},
+    {"profileName": "Scott Smith", "profileImageUrl": "/owm2.jpg"},
+    {"profileName": "Mark Miller", "profileImageUrl": "/owm3.jpg"},
+    {"profileName": "Paul Brown", "profileImageUrl": "/owm4.jpg"},
+    {"profileName": "Robert Jones", "profileImageUrl": "/owm5.jpg"},
+    {"profileName": "Richard Williams", "profileImageUrl": "/owm6.jpg"},
+    {"profileName": "Jeffrey Davis", "profileImageUrl": "/owm7.jpg"},
+    {"profileName": "Kevin Anderson", "profileImageUrl": "/owm8.jpg"},
+    {"profileName": "Thomas Wilson", "profileImageUrl": "/owm9.jpg"},
+    {"profileName": "David Martin", "profileImageUrl": "/owm10.jpg"},
+    {"profileName": "Charles Taylor", "profileImageUrl": "/owm11.jpg"},
+    {"profileName": "Steven Moore", "profileImageUrl": "/owm12.jpg"},
+    {"profileName": "Christopher Thompson", "profileImageUrl": "/owm13.jpg"},
+    {"profileName": "Daniel White", "profileImageUrl": "/owm14.jpg"},
+    {"profileName": "John Clark", "profileImageUrl": "/owm15.jpg"},
+    {"profileName": "William Thomas", "profileImageUrl": "/owm16.jpg"},
+    {"profileName": "Timothy Hall", "profileImageUrl": "/owm17.jpg"},
+    {"profileName": "Brian Baker", "profileImageUrl": "/owm18.jpg"},
+    {"profileName": "James Nelson", "profileImageUrl": "/owm19.jpg"},
+    {"profileName": "Joseph Allen", "profileImageUrl": "/owm20.jpg"}
+  ]
+}
