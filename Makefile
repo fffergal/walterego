@@ -3,3 +3,6 @@ requirements.txt: requirements.in
 
 dev-requirements.txt: dev-requirements.in requirements.txt
 	CUSTOM_COMPILE_COMMAND="make dev-requirements.txt" pip-compile dev-requirements.in --no-emit-index-url --no-annotate
+
+junit.xml: tox.ini walterego/**/*
+	tox
