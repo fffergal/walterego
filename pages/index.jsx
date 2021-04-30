@@ -23,11 +23,11 @@ export default function Home() {
             Connect walterego.golf with your Twitter account to replace your name
             and profile image with an old white man, whenever you need a break!
           </p>
-          <TwitterCheck>
-            <Button variant="primary" href="/dashboard">
-              Go to Dashboard
-            </Button>
-          </TwitterCheck>
+          <p>
+            <TwitterCheck>
+              <Button variant="primary" href="/dashboard">Go to Dashboard</Button>
+            </TwitterCheck>
+          </p>
         </Col>
         <Col lg={4} className="justify-content-center">
           <Image src="/walterego.png" className="logo d-block m-auto" />
