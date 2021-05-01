@@ -71,7 +71,7 @@ export default function SportModeFeatures() {
           <Card.Title>Father figure ⚾️</Card.Title>
           <Card.Text>
             A paternal bot gently but firmly sets your chosen reply-guy
-            straight.
+            straight. Some people won’t listen to anyone else.
           </Card.Text>
         </Card.Body>
       </Card>
