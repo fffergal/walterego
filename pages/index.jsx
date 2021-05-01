@@ -23,7 +23,7 @@ export async function getStaticProps() {
 export default function Home({ stockProfiles }) {
   const carouselProfiles = stockProfiles.map((profile) => (
     <Carousel.Item key={profile.profileName}>
-      <Profile {...profile} profileScreenName="fffergal" />
+      <Profile {...profile} profileScreenName="fffergal" showFavorite={false} />
     </Carousel.Item>
   ));
   return (

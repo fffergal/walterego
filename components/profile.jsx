@@ -2,7 +2,9 @@ import { Card, Image } from 'react-bootstrap';
 
 import SportModal from './sport-modal';
 
-export default function Profile({ profileImageUrl, profileName, profileScreenName }) {
+export default function Profile({
+  profileImageUrl, profileName, profileScreenName, showFavorite = true,
+}) {
   const headerStyle = {
     borderBottom: 'none',
   };
@@ -30,9 +32,11 @@ export default function Profile({ profileImageUrl, profileName, profileScreenNam
           {profileScreenName}
         </Card.Subtitle>
       </Card.Body>
-      <Card.Footer className="text-center">
-        <SportModal aria-label="Favorite" variant="light">&#9825;</SportModal>
-      </Card.Footer>
+      {showFavorite ? (
+        <Card.Footer className="text-center">
+          <SportModal aria-label="Favorite" variant="light">&#9825;</SportModal>
+        </Card.Footer>
+      ) : null}
     </Card>
   );
 }
