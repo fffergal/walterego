@@ -66,6 +66,15 @@ export default function SportModeFeatures() {
           </Card.Text>
         </Card.Body>
       </Card>
+      <Card className="sml-card">
+        <Card.Body>
+          <Card.Title>Father figure ⚾️</Card.Title>
+          <Card.Text>
+            A paternal bot gently but firmly sets your chosen reply-guy
+            straight.
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </CardColumns>
   );
 }
