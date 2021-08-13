@@ -11,9 +11,8 @@ export default function Privacy() {
       </p>
       <p>
         You sign in with Twitter. Walter Ego stores a “token” as a cookie. The
-        “token” gives access to your Twitter account. The token is encrypted so
-        only Walter Ego can use it. Walter Ego uses the token to change your
-        Twitter profile and doesn’t use it to collect any data.
+        “token” gives access to your Twitter account. Walter Ego uses the token
+        to change your Twitter profile and doesn’t use it to collect any data.
       </p>
       <p>
         Walter Ego uses industry best practice to keep data safe. Any further
