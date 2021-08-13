@@ -7,9 +7,10 @@ export default function SportModal({ children, ...props }) {
   const [showSport, setShowSport] = useState(false);
 
   function sportModeInterest(ev) {
+    const featureText = props['aria-label'] || ev.target.innerText;
     window.plausible(
       'Sport Mode Interest',
-      { props: { feature: ev.target.innerText } },
+      { props: { feature: featureText } },
     );
     setShowSport(true);
   }
