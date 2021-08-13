@@ -62,6 +62,22 @@ export default function About() {
         just white men, they are old men. I consider this “punching up” to
         people like that.
       </p>
+      <h2>I need real help with online harassment, what can I do?</h2>
+      <p>
+        My day job is at
+        {' '}
+        <a href="https://www.blockpartyapp.com/?utm_source=walterego">
+          Block Party
+        </a>
+        , we can help with harassment in your Twitter replies currently, and
+        will add more platforms. We also have a
+        {' '}
+        <a href="https://resources.blockpartyapp.com/?utm_source=walterego">
+          resource center
+        </a>
+        {' '}
+        with links to more general advice and help.
+      </p>
     </MainTemplate>
   );
 }
