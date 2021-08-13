@@ -36,6 +36,13 @@ export default function About() {
         in a privileged enough position to make light of it. I don’t want to
         suggest this isn’t a real problem by making a joke.
       </p>
+      <p>
+        Walter Ego is a bad idea. It is
+        {' '}
+        <em>not</em>
+        {' '}
+        your responsibility to change so you can avoid harassment.
+      </p>
       <h2>Where do the profile images come from?</h2>
       <p>
         They are made with machine learning from
