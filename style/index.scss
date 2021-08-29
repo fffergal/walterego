@@ -9,15 +9,6 @@ h1 {
   margin-top: 0.5rem;
 }
 
-.sport-columns {
-  @include media-breakpoint-up(sm) {
-    column-count: 2;
-  }
-  @include media-breakpoint-up(lg) {
-    column-count: 3;
-  }
-}
-
 .logo {
   max-height: 250px;
 }
