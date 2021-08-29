@@ -14,6 +14,7 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
 from walterego.auth import oauth
 from walterego.blueprints import (
+    samplescreennames,
     stockprofile,
     twittercallback,
     twittercheck,
@@ -81,6 +82,7 @@ def create_app():
 
     oauth.init_app(app)
 
+    app.register_blueprint(samplescreennames.bp)
     app.register_blueprint(stockprofile.bp)
     app.register_blueprint(twittercallback.bp)
     app.register_blueprint(twittercheck.bp)
