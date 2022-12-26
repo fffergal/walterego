@@ -64,13 +64,12 @@ export default function About() {
       </p>
       <h2>I need real help with online harassment, what can I do?</h2>
       <p>
-        My day job is at
+        I used to work at
         {' '}
         <a href="https://www.blockpartyapp.com/?utm_source=walterego">
           Block Party
         </a>
-        , we can help with harassment in your Twitter replies currently, and
-        will add more platforms. We also have a
+        , there are tools to help with harassment on social media, and a
         {' '}
         <a href="https://resources.blockpartyapp.com/?utm_source=walterego">
           resource center
