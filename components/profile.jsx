@@ -17,6 +17,7 @@ export default function Profile({
     <Card>
       <Card.Header style={headerStyle}>
         <Image
+          alt=""
           width={76}
           height={76}
           className="align-self-center"

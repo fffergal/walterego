@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useSWR from 'swr';
 
 export default function TwitterCheck({ children }) {
@@ -7,7 +8,7 @@ export default function TwitterCheck({ children }) {
   if (!data.signedIn) {
     return (
       <a href="/api/v1/twitterlink">
-        <img src="/sign-in-with-twitter.png" alt="Sign in with Twitter" />
+        <Image src="/sign-in-with-twitter.png" alt="Sign in with Twitter" />
       </a>
     );
   }

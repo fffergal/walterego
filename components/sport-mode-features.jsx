@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 
 export default function SportModeFeatures() {
-  if (typeof window !== 'undefined') {
-    useEffect(() => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
       const msnryPromise = (async () => {
         const Masonry = (await import('masonry-layout')).default;
         return new Masonry('.sports-columns', { percentagePosition: true, transitionDuration: 0 });
@@ -14,8 +14,8 @@ export default function SportModeFeatures() {
           msnry.destroy();
         })();
       };
-    }, []);
-  }
+    }
+  }, []);
   return (
     <Row className="sports-columns" sm={2} lg={3}>
       <Col>
