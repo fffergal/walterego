@@ -30,7 +30,7 @@ ENV_SECRETS = [
 
 # OpenTelemetry uses globals, so need to keep track of tracing init globally instead of
 # app context.
-tracing_inited_holder = SimpleNamespace(inited=False)
+tracing_inited_holder = SimpleNamespace(inited=False, processor=None)
 
 
 def init_tracing():
@@ -41,9 +41,10 @@ def init_tracing():
     some forking and it needs to be handled without knowing which app runner is being
     used.
 
-    To be used with Flask's before_first_request.
+    To be used with Flask's before_request.
     """
     if not tracing_inited_holder.inited:
+        tracing_inited_holder.inited = True
         otlp_exporter = OTLPSpanExporter(
             endpoint="https://api.honeycomb.io:443",
             insecure=False,
@@ -56,7 +57,6 @@ def init_tracing():
         trace.set_tracer_provider(TracerProvider())
         tracing_inited_holder.processor = BatchSpanProcessor(otlp_exporter)
         trace.get_tracer_provider().add_span_processor(tracing_inited_holder.processor)
-        tracing_inited_holder.inited = True
 
 
 def flush_tracing(exc):
@@ -66,7 +66,7 @@ def flush_tracing(exc):
     To be used with Flask's teardown_request. Needed because Vercel can suspend the
     thread before flushing.
     """
-    if hasattr(tracing_inited_holder, "processor"):
+    if tracing_inited_holder.processor:
         tracing_inited_holder.processor.force_flush()
 
 
@@ -75,7 +75,7 @@ def create_app():
     app = Flask(__name__)
     app.config.update({key: os.environ[key] for key in ENV_SECRETS})
 
-    app.before_first_request(init_tracing)
+    app.before_request(init_tracing)
     app.teardown_request(flush_tracing)
     RequestsInstrumentor().instrument()
     FlaskInstrumentor().instrument_app(app)
