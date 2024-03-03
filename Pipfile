@@ -1,5 +1,0 @@
-# We don't actually use pipenv, this is just here so Vercel picks up the right
-# Python version.
-
-[requires]
-python_version = "3.9"
