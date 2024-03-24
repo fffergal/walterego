@@ -1,6 +1,5 @@
 """Link or Sign in with Twitter."""
 
-
 from flask import Blueprint, url_for
 
 from walterego.auth import oauth

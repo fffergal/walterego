@@ -1,4 +1,5 @@
 """Find active Twitter screen names from sample feed."""
+
 import gzip
 import itertools
 import json
