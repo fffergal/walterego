@@ -109,7 +109,7 @@ requests==2.31.0
     # via
     #   -r requirements.in
     #   opentelemetry-exporter-otlp-proto-http
-typing-extensions==3.10.0.0
+typing-extensions==4.10.0
     # via opentelemetry-sdk
 urllib3==1.26.18
     # via requests
