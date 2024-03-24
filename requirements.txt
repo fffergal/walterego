@@ -16,7 +16,7 @@ chardet==4.0.0
     # via requests
 click==8.1.7
     # via flask
-cryptography==3.4.7
+cryptography==42.0.4
     # via authlib
 deprecated==1.2.14
     # via
