@@ -1,8 +1,8 @@
-Authlib~=0.15
-Flask~=1.1
-grpcio~=1.37
-opentelemetry-exporter-otlp~=1.1
-opentelemetry-instrumentation-flask~=0.20b0
-opentelemetry-instrumentation-requests~=0.20b0
-opentelemetry-sdk~=1.1
+Authlib~=1.3
+Flask~=3.0
+opentelemetry-exporter-otlp~=1.23.0
+opentelemetry-instrumentation-flask~=0.44b
+opentelemetry-instrumentation-requests~=0.44b
+opentelemetry-sdk~=1.23.0
+protobuf~=3.20,<3.21
 requests~=2.25

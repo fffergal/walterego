@@ -51,7 +51,7 @@ export default function Home({ stockProfiles }) {
           </Carousel>
         </Col>
         <Col lg={4} className="justify-content-center">
-          <Image src="/walterego.png" className="logo d-block m-auto" />
+          <Image alt="" src="/walterego.png" className="logo d-block m-auto" />
         </Col>
       </Row>
       <h2 className="mt-2"><em>Sport mode! 🏎</em></h2>

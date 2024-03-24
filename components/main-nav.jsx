@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
@@ -6,18 +7,16 @@ export default function MainNav() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand>
-          <Link href="/">
-            <a className="text-reset text-decoration-none">
-              <img
-                alt=""
-                src="/walterego.png"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-              />
-              {' '}
-              Walter Ego
-            </a>
+          <Link href="/" className="text-reset text-decoration-none">
+            <Image
+              alt=""
+              src="/walterego.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+            {' '}
+            Walter Ego
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

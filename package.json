@@ -7,24 +7,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext js,jsx"
+    "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap": "^5.1.0",
+    "bootstrap": "^5.3.3",
     "masonry-layout": "^4.2.2",
-    "next": "^11.1.0",
-    "react": "^17.0.1",
-    "react-bootstrap": "^2.0.0-beta.6",
-    "react-dom": "^17.0.1",
-    "sass": "^1.32.11",
-    "swr": "^0.5.5"
+    "next": "^14.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
+    "react-dom": "^18.2.0",
+    "sass": "^1.71.1",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "@next/eslint-plugin-next": "^14.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.1.1"
   }
 }

@@ -15,10 +15,10 @@ export default function MainTemplate({ children }) {
         {children}
         <footer className="text-center pt-3 mt-2 border-top">
           <p>
-            <Link href="/about"><a>Who’s responsible for all this?</a></Link>
+            <Link href="/about">Who’s responsible for all this?</Link>
           </p>
           <p>
-            <Link href="/privacy"><a>Privacy</a></Link>
+            <Link href="/privacy">Privacy</Link>
           </p>
         </footer>
       </Container>
