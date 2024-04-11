@@ -31,7 +31,7 @@ googleapis-common-protos==1.53.0
     #   opentelemetry-exporter-otlp-proto-http
 grpcio==1.62.0
     # via opentelemetry-exporter-otlp-proto-grpc
-idna==2.10
+idna==3.7
     # via requests
 importlib-metadata==6.11.0
     # via
