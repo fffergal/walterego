@@ -56,7 +56,7 @@ pluggy==0.13.1
     # via
     #   pytest
     #   tox
-py==1.10.0
+py==1.11.0
     # via tox
 pycodestyle==2.7.0
     # via flake8
