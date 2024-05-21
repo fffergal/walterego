@@ -5,4 +5,4 @@ opentelemetry-instrumentation-flask~=0.44b
 opentelemetry-instrumentation-requests~=0.44b
 opentelemetry-sdk~=1.23.0
 protobuf~=3.20,<3.21
-requests~=2.31
+requests~=2.32
