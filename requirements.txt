@@ -4,11 +4,11 @@
 #
 #    make requirements.txt
 #
-authlib==1.3.0
+authlib==1.3.1
     # via -r requirements.in
 blinker==1.7.0
     # via flask
-certifi==2023.7.22
+certifi==2024.7.4
     # via requests
 cffi==1.14.5
     # via cryptography
@@ -111,7 +111,7 @@ requests==2.32.2
     #   opentelemetry-exporter-otlp-proto-http
 typing-extensions==4.10.0
     # via opentelemetry-sdk
-urllib3==1.26.18
+urllib3==1.26.19
     # via requests
 werkzeug==3.0.3
     # via flask
