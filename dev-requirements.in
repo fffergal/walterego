@@ -1,7 +1,6 @@
--c requirements.txt
 black~=24.3
 coverage~=5.5
-flake8~=3.9
+flake8~=7.0
 isort~=5.8
 pip-tools~=7.4
 pydocstyle~=6.0
