@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.3",
     "masonry-layout": "^4.2.2",
     "next": "^14.1.1",

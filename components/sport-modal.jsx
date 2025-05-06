@@ -30,9 +30,8 @@ export default function SportModal({ children, ...props }) {
             {' '}
             <em>premium</em>
             {' '}
-            ✨ version of Walter Ego. I haven’t made it yet, but if 100 people
-            talk about Walter Ego on Twitter, I’ll make the first sport mode
-            feature:
+            version of Walter Ego. I haven’t made it yet, but if 100 people talk
+            about Walter Ego on X, I’ll make the first sport mode feature:
             {' '}
             <strong>undo</strong>
             .

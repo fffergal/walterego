@@ -5,6 +5,7 @@ import Head from 'next/head';
 import {
   Row, Col, Image, Button, Carousel,
 } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
 
 import MainTemplate from '../components/main-template';
 import Profile from '../components/profile';
@@ -37,9 +38,17 @@ export default function Home({ stockProfiles }) {
           <p>
             Say bye-bye to reply guys, by pretending to be a kindly old white man.
           </p>
+          <Alert variant="secondary">
+            <p>
+              X has limited access for apps since Walter Ego was first made. Walter Ego
+              was last confirmed working on 6th May 2025, but this could change at any
+              time. Sorry!
+            </p>
+          </Alert>
           <p>
-            Connect walterego.golf with your Twitter account to replace your name
-            and profile image with an old white man, whenever you need a break!
+            Connect walterego.golf with your X (formerly Twitter) account to replace
+            your name and profile image with an old white man, whenever you need a
+            break!
           </p>
           <p>
             <TwitterCheck>
