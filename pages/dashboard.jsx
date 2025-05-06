@@ -37,10 +37,7 @@ export default function Dashboard() {
   else {
     content = (
       <>
-        <p>
-          Here’s your new profile. Your Twitter account has already been
-          updated.
-        </p>
+        <p>Here’s your new profile. Your X account has already been updated.</p>
         <Profile {...profile.data} />
         <p className="mt-2"><SportModal>Undo</SportModal></p>
       </>
